@@ -13,7 +13,9 @@
 
 <div class="player">
 
+<div class="disco">
 <img src="foto.jpg" class="capa">
+</div>
 
 <h2>Nossa Música</h2>
 <p class="artista">Para o amor da minha vida ❤️</p>
@@ -22,9 +24,12 @@
 <source src="musica.mp3" type="audio/mp3">
 </audio>
 
-<div class="progresso">
-<input type="range" id="barra" value="0">
+<div class="tempo">
+<span id="atual">0:00</span>
+<span id="duracao">0:00</span>
 </div>
+
+<input type="range" id="barra" value="0">
 
 <button id="play">▶</button>
 
@@ -34,12 +39,14 @@
 Desde o dia em que te conheci, tudo ficou mais bonito.  
 Cada momento contigo virou uma música especial na minha vida.  
 Essa página é só uma pequena forma de te lembrar  
-o quanto você é importante para mim. ❤️  
+o quanto você é importante para mim. ❤️
 </p>
 
 </div>
 
 </div>
+
+<div id="hearts"></div>
 
 <script src="script.js"></script>
 
