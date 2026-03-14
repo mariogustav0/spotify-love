@@ -1,13 +1,36 @@
-const play = document.getElementById("play");
-const musica = document.getElementById("musica");
-const texto = document.getElementById("texto");
+const play = document.getElementById("play")
+const musica = document.getElementById("musica")
+const barra = document.getElementById("barra")
+const texto = document.getElementById("texto")
 
-play.addEventListener("click", function(){
+play.addEventListener("click", () => {
 
-musica.play();
+if(musica.paused){
 
-texto.style.display = "block";
+musica.play()
+play.innerHTML="⏸"
 
-play.innerHTML = "⏸";
+texto.style.display="block"
 
-});
+}else{
+
+musica.pause()
+play.innerHTML="▶"
+
+}
+
+})
+
+musica.addEventListener("timeupdate",()=>{
+
+const progresso=(musica.currentTime/musica.duration)*100
+
+barra.value=progresso
+
+})
+
+barra.addEventListener("input",()=>{
+
+musica.currentTime=(barra.value/100)*musica.duration
+
+})
