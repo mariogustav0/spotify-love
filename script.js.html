@@ -1,0 +1,13 @@
+const play = document.getElementById("play");
+const musica = document.getElementById("musica");
+const texto = document.getElementById("texto");
+
+play.addEventListener("click", function(){
+
+musica.play();
+
+texto.style.display = "block";
+
+play.innerHTML = "⏸";
+
+});
