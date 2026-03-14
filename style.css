@@ -48,7 +48,8 @@ border-radius:50%;
 
 object-fit:cover;
 
-border:6px solid #1DB954;
+display:block;
+margin:auto;
 
 }
 
